@@ -17,8 +17,9 @@ void draw(){
   
  for(int i = 0; i < totalNumPics; i++){
    color(255, 0,0);
-   int xIndex = i % numPicsX;//modulo
+   int xIndex = i % numPicsX;
    float yIndex = floor((float)i/(float)numPicsX);
+   
    
    int x = margin + (rectangleWidth + margin) * xIndex;
    int y = (int)(margin + (rectangleHeight + margin) * yIndex);

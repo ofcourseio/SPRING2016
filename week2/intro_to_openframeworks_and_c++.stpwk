@@ -1,0 +1,30 @@
+#Intro to openFrameworks and C++
+###openFrameworks
+* What is openFrameworks (OF) and what it is not.
+* Similarities and differences with Processing.
+* Installing OF.
+* Running examples
+* OF folder structure
+* OF core and addons
+* What are addons
+* Using OF's Project Generator (PG)
+* Adding addons to a project using PG
+* OF core addons-> usage and examples
+* Finding and downloading addons using ofxaddons.com and github
+* Most popular/useful addons
+ 
+ 
+#C++
+
+* Important differences with Processing (Java)
+* .h files and .cpp files
+* Preprocessor directives
+* Data types
+* Bits, bytes and numbers
+* Printing to the console
+* Function structure
+* Data collections -> vectors, not arrays.
+* the ++ and += operators
+* Iterating through a vector
+* Using for(auto a: b)
+
