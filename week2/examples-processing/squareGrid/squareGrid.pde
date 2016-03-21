@@ -17,9 +17,32 @@ void draw(){
   
  for(int i = 0; i < totalNumPics; i++){
    color(255, 0,0);
-   int x = i % numPicsX;//modulo
-   int y = floor(i/numPicsX);
-   rect(margin + (rectangleWidth + margin)*x, margin + (rectangleHeight + margin) * y, rectangleWidth, rectangleHeight);
- } 
-  
+   int xIndex = i % numPicsX;//modulo
+   float yIndex = floor((float)i/(float)numPicsX);
+   
+   int x = margin + (rectangleWidth + margin) * xIndex;
+   int y = (int)(margin + (rectangleHeight + margin) * yIndex);
+   int w = rectangleWidth;
+   int h = rectangleHeight;
+   if(inside(x, y, w, h)){
+     if(mousePressed){
+        fill(255,0,0);
+     }else{
+         fill(255, 127, 127);
+     }
+   }else{
+     fill(255);
+   }
+   rect(x, y, w, h);
+ }  
 }
+
+boolean inside(int x, int y , int w, int h){
+  if(mouseX > x && mouseX < x + w && mouseY > y && mouseY < y + h){
+  return true;
+  }else{
+  return false;
+  }
+}
+
+///   5/2 = floor(2.5) = 2; ceil(2.5) = 3; round(2.5) = 3
