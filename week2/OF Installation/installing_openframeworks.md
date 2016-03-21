@@ -5,6 +5,8 @@
 Download the latest openFrameworks release for Xcode from [here.](http://openframeworks.cc/versions/v0.9.3/of_v0.9.3_osx_release.zip)
 
 Check which version of Mac OS you have.
+
+
 ![image](images/osver1.png)
 
 ![image](images/osver2.png)
