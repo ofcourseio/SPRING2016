@@ -34,7 +34,7 @@ Here, ```ofImage``` is the type of objects that this ~~collection~~ list can hav
 
 #### Adding elements
 
-Lets add an ofImage:
+Lets add an ofImage
 
 ```myImages.push_back(ofImage());```
 
