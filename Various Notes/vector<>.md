@@ -21,7 +21,7 @@ You can use any of the two forms, the latter is just shorter to write :) .
 
 Imagine a ```vector< float >``` as a list of ```float``` numbers. As any list, its element are orderer in a sequential way. It could be ```float``` or any other type of object. To refer to each element of the list we use its position number or index. The first element has always index 0.
 
-###  vector<...> usage
+### Usage
 #### Declaration
 
 To declare a vector in OF you should write, usually in the .h file.
@@ -29,21 +29,16 @@ To declare a vector in OF you should write, usually in the .h file.
 ```vector<ofImage> myImages;```
 
 Here, ```ofImage``` is the type of objects that this ~~collection~~ list can have  and its name is ```myImages```. So far it is empty, as we haven't added anything to it.
+Lets add an ofImage.
 
-
-
-#### Adding elements
-
-Lets add an ofImage
-
-```myImages.push_back(ofImage());```
+`ofImage.push_back(ofImage());`
 
 This will add a new empty ofImage as the last element of our collection.
 
 In this case we would like to load something into this new empty ofImage.
 Now to load an image into it we do the following.
 
-```myImages.back().load("someImageFile.png");```
+`myImages.back().load("someImageFile.png");`
 
 Here the ```.back()``` part is refering to the last element of our collection, the new empty ofImage we just added.
 The ```.load("someImageFile.png")``` is telling this last element to load into itself an image with name ```someImageFile.png``` that should be in the ```bin/data/``` folder of our project.
@@ -52,7 +47,7 @@ The ```.load("someImageFile.png")``` is telling this last element to load into i
 
 For accessing the elements of the ```vector< >```  use the ```[]``` operator, just like in an array. In between the square brackets put the index of the element to access.
 
-```myImages[0].draw(0,0);```
+`myImages[0].draw(0,0);`
 
 This will access the first element of the collection, which has index 0, and it will draw it at cordinates 0,0.
 
@@ -70,28 +65,28 @@ Notice that in the declaration of the for loop it says ```myImages.size()```. Th
 
 #### Clearing
 
-If you want to erase all the elements of your vector < > you just call
+If you want to erase all the elements of your `vector < >` you just call
 
-```myImages.clear()```
+`myImages.clear()`
 
 #### Resize
 
 If you want to resize the vector you can call,
 
-```myImages.resize(10);```
+`myImages.resize(10);`
 
 Here we are resizing the collection to have only 10 elements, if it originaly had more elements only the first 10 elements will be left inside of it and the rest will be destroyed/deleted. In case of the opposite, you want to resize to a larger number of elements than what it already has, the necesary objects will be added at the end of the vector. Each new element will be created with the default values for that kind of object. In the case of ofImage it will be an empty image.
 
 In case that you dont want these new elements to be the default you can pass as a second argument telling what you want these to be.
 So if we have a collection of ```float``` called ```numbers```:
 
-```vector<float>numbers;```
+`vector<float>numbers;`
 
 and we write 
 
-```numbers.resize(10, 0.33);```
+`numbers.resize(10, 0.33);`
 
-the ```numbers``` vector will be resized to have 10 elements and each of the new elements added will have a value of ```0.33```.
+the `numbers` vector will be resized to have 10 elements and each of the new elements added will have a value of `0.33`.
 
 
 
