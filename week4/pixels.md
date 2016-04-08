@@ -1,4 +1,6 @@
 #Pixels
+#####Author: Roy J. Macdonald
+
 
 The pixel, short for **pic**ture **el**ement, is the smallest unit from which electronic images are made of. Each pixel contains information about a single color on a certain location on an image. There are modes for storing this color information. The most common modes are Grayscale (only grays, from black to white), RGB (Red, Green and Blue), RGBA (Red, Green, Blue and Alpha) or CMYK (Cyan, Magenta, Yellow and Black). Each of this values is stored as a number, and it is called a **channel.** Hence, Grayscale has 1 channel, RGB has 3 RGBA has 4 and CMYK has 4. The color information can be stored in any of these ways, but it will be needed to be transformed into RGB for electronic displays or CMYK for printing.
 
@@ -88,7 +90,7 @@ Take into account that each line here is just because a new line was added to th
 
 ####Multi Channel pixels
 When we have more than one channel per pixel, each pixel is stored in the same way as grayscale images but instead of adding just one value to the array we add to it the values for each channel.
-![<!-- Hacer imagen-->](imgs/pixelsMemoryRGB.jpg)
+![image](imgs/pixelsMemoryRGB.jpg)
 
 
 ##CPU and GPU
@@ -127,4 +129,6 @@ The ofImage class contains an ofPixels and an ofTexture objects. This allows you
 When ever you modify your image pixels you are modifying the pixel data in the CPU memory, so in order to draw this on screen you need to pass this modified pixels to the texture in the cpu. This is not done automatically. For doing such you need to call the ```update()``` function on your ofImage object. This is not automatic because passing data between the CPU and GPU is slow, so it must be avoided as much as possible.
 
 
+######Aknowledgements:
+Images and pixel data in the **single channel pixels** subsection taken from the [ofBook's image processing Chapter](https://github.com/openframeworks/ofBook/blob/master/chapters/image_processing_computer_vision/chapter.md) written by Golan Levin.
 
